@@ -1,7 +1,9 @@
-from reportlab.pdfgen import canvas 
+from reportlab.pdfgen import canvas
 
-fileName = 'MyDoc.pdf'
+def create_pdf():
+    c = canvas.Canvas("my_pdf.pdf")
+    c.drawString(100, 750, "Hello, I am a PDF document created with Python!")
+    c.save()
 
-pdf = canvas.Canvas(fileName)
-
-pdf.save()
+if __name__ == "__main__":
+    create_pdf()
